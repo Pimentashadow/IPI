@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupi page</title>
+    <link rel="stylesheet" href="../geral/geral.css">
+    <link rel="stylesheet" href="../styles/rupi.css">
+</head>
+<body>
+     <header>
+         <div class="img-logo">
+            <a href="../../index.html">
+                <img src="../assets/img/favicon1.png" alt="Logo do IPIAL" width="50px" height="40px">
+            </a>
+            <a href="../../index.html">IPIAL-26</a>
+        </div>
+
+        <nav id="links">
+            <a href="../index.html">Home</a>
+            <a href="../pages/cadastro.html">Cadastro</a>
+            <a href="../pages/login.html">Login</a>
+        </nav>
+
+        <div id="burguer">
+            <button id="boto">
+                <svg viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+       <div id="rupi_box">
+                    <button id="btn" onclick="codigo()">Obter Rupi</button>
+                    <div id="res" class="arearupi"></div>
+                    <p>Cópie o código</p>
+                </div>
+                <script src="../js/script.js"></script>
+                <script src="../javascript/cadastro.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TelaCadastro</title>
+    <link rel="stylesheet" href="../geral/geral.css">
+    <link rel="stylesheet" href="../styles/cadastro.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="img-logo">
+                <a href="../../index.html">ALDA LARA</a>
+            </div>
+            <ul id="links">
+                <a href="../../index.html">Home</a>
+                <a href="./cursos.html">Cursos</a>
+                <a href="./cadastro.html">Cadastro</a>
+                <a href="./login.html">Login</a>
+            </ul>
+            <div id="menu-hamburguer">
+                <img src="../icones/menu-hamburguer.png" alt="menu-hamburguer" width="32px">
+            </div>
+        </nav>
+    </header>
+ 
+
+    <section class="contc">
+        <div class="contform">
+            <form>
+
+                <div>
+
+                    <div class="cas">
+                        <h1>Cadastro</h1>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="text">Digite o seu Nome Completo</label><br>
+                        <input type="text" id="text" name="text" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="text">Digite o seu E-mail</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="tel">Digite o seu número de telefone</label><br>
+                        <input type="tel" id="tel" name="tel" placeholder="(+244)">
+                    </div>
+                     <p>Clique aqui para obter o seu Rupe -><a id="rpu" href="../pages/rupi.html">Pagar</a></p>
+                    <div class="input-group">
+                        <label for="text">Digite o seu nº do comprovativo</label><br>
+                        <input type="text" id="rupe" name="rupe" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="date">Data de nascimento</label><br>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="genero">
+                        <div>
+                            <input type="radio" id="gen2" name="gen" required>
+                            <label class="gens" for="gen2">Feminino</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="genM" name="gen" required>
+                            <label class="gens" for="genM">Masculino</label>
+                        </div>
+                    </div>
+
+                    <div class="sel">
+                        <select name="chosen" id="chosen" class="chosen" required>
+                            <option class="opt1" value="">Escolha o curso</option>
+                            <option class="opt1" value="Informática">Informática</option>
+                            <option class="opt1" value="Construção civil">Construção civil</option>
+                            <option class="opt1" value="Electricidade">Electricidade</option>
+                            <option class="opt1" value="Electrónica e Telecomunicações">Electrónica e Telecomunicações
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="ficheiro">
+
+                        <label for="file" id="file1" class="label1">Envie  o  seu BI</label>
+                        <input type="file" id="file2" name="file" required>
+
+                        <label for="file" class="label1">Envie o seu certificado</label>
+                        <input type="file" id="file" name="file" required>
+                    </div>
+
+                    <div class="button-cadastro">
+                        <button type="submit" id="aa">Entrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="menus">
+                <h1>Menus</h1>
+                <a href="../../index.html">Home</a>
+                <a href="./resultado.html">Resultado</a>
+                <a href="./login.html">Login</a>
+                <a href="./login.html">Cadastrar</a>
+            </div>
+
+            <div class="contato">
+                <h1>Contactos</h1>
+                <li>
+                    <img src="../icones/localizacao.png" alt="localizacao" width="24px" />
+                    <p>Luanda</p>
+                </li>
+                <li>
+                    <img src="../icones/telefone.png" alt="phone-icon" width="24px" />
+                    <p>923 333 222 / 935 262 311</p>
+                </li>
+                <li>
+                    <img src="../icones/email.png" alt="email-icon" width="24px" />
+                    <p>aldalara@gmail.com</p>
+                </li>
+            </div>
+        </div>
+
+        <div class="copy">
+            <p>&copy; ALDA LARA 2026</p>
+        </div>
+
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

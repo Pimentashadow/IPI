@@ -1,0 +1,347 @@
+.contc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:#150e36;
+    height:100%;
+    color: var(--text-dark);
+}
+
+#rpu,p{
+    color: #fff;
+}
+form{
+    border-radius: 10px;
+    padding: 20px;
+    background-color:transparent;
+    width:500px;
+    margin-top: 100px;
+    display: grid;
+    gap: 15em;
+    place-items: center;
+}
+
+ form #especifi{
+    width: 300px;
+ }
+
+ form #especifi .requisitos .chane{
+    color: #fff;
+    text-align:justify;
+ }
+
+ .requisitos p a{
+    color: blue;
+    text-decoration: underline;
+ }
+
+.cas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        color: #fff;
+    }
+}
+
+
+.input-group {
+    position: relative;
+    margin: 20px 0;
+    margin-top: 30px;
+}
+
+form div .input-group label {
+    color: #fff;
+    margin-top: 23px;
+}
+form .genero .gens {
+    color: #fff;
+}
+
+.input-group input {
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    padding: 0 10px;
+    background: transparent;
+    border: 1.2px solid #fff;
+    outline: none;
+    border-radius: 5px;
+    color:#fff;
+}
+
+input[type="date"] {
+    color: #fff;
+}
+
+
+input::placeholder{
+    color:white;
+}
+/* seleção de opções */
+.sel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.sel .chosen {
+    color: black;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px 10px;
+    outline: none;
+    background-color: #fff;
+    border-radius: 10px 10px;
+}
+
+.sel .opt1 {
+    color: black;
+    text-align: center;
+}
+
+/* fim */
+
+/* Botões de gênero */
+.genero {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.genero .gens {
+    color: #000;
+}
+
+/* fim */
+
+/* input de ficheiros */
+input[type="file"] {
+    display: none;
+
+}
+
+
+.ficheiro {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 23px;
+
+}
+
+.label1 {
+    padding: 10px 10px;
+    width: 100px;
+    font-size: 15px;
+    color: #000;
+    background:#6d56df;
+    display: block;
+    margin-top: 10px;
+    font-family: 'poppins', sans-serif;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 15px;
+    border: 2px solid white;
+    text-align: center;
+
+    &:hover{
+        border:1px solid whitesmoke
+    }
+
+}
+
+.button-cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+
+}
+
+#aa {
+
+    padding: 20px 40px;
+    border-radius: 15px;
+    border: none;
+    transition: 1s;
+    cursor: pointer;
+    background-color: white;
+    color: #000;
+
+    &:hover {
+        background-color: black;
+        transform: scale(1.05);
+        color:white;
+    }
+}
+/* formato pra tablets e telas maiores */
+@media(max-width:1018px) and (min-width:769px) {
+
+    .contc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background:#6f5fbe;
+        padding: 57px;
+        color: var(--text-dark);
+    }
+}
+
+/* formato para telefones */
+@media(min-width:480px) and (max-width:540px) {
+
+ 
+    .contc .contform form{
+         display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        gap: 60px;
+    }
+
+
+    .cas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            color: #dfd3d3;
+        }
+    }
+
+
+    .input-group {
+        position: relative;
+        margin: 20px 0;
+        margin-top: 30px;
+    }
+
+    form .input-group label {
+        color: #000;
+    }
+
+    .input-group input {
+        width: 320px;
+        height: 40px;
+        font-size: 16px;
+        padding: 0 10px;
+        background: transparent;
+        border: 1.2px solid #fff;
+        outline: none;
+        border-radius: 5px;
+    }
+
+    input[type="date"] {
+        color: #fff;
+    }
+
+    /* seleção de opções */
+    .sel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+
+    }
+
+    .sel .chosen {
+        color: black;
+        border: none;
+        font-size: 16px;
+        width: 100%;
+        padding: 10px 10px;
+        outline: none;
+        background-color: #fff;
+        border-radius: 10px 10px;
+    }
+
+    .sel .opt1 {
+        color: black;
+        text-align: center;
+    }
+
+    /* fim */
+
+    /* Botões de gênero */
+    .genero {
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .genero .gens {
+        color: #fff;
+    }
+
+    /* fim */
+
+    /* input de ficheiros */
+    input[type="file"] {
+        display: none;
+
+    }
+
+
+    .ficheiro {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 23px;
+
+    }
+
+    .label1 {
+        padding: 10px 10px;
+        width: 100px;
+        font-size: 15px;
+        color: #000;
+        background-image: var(--bg);
+        display: block;
+        margin-top: 10px;
+        font-family: 'poppins', sans-serif;
+        cursor: pointer;
+        transition: .5s;
+        border-radius: 15px;
+        border: 2px solid white;
+        text-align: center;
+
+        &:hover{
+            border: 1px solid whitesmoke;
+        }
+
+    }
+
+
+
+
+    .button-cadastro {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 70px;
+
+    }
+
+    #aa {
+
+        padding: 20px 40px;
+        border-radius: 15px;
+        border: none;
+        transition: 1s;
+        cursor: pointer;
+        background-color: white;
+        color: #000;
+
+        &:hover {
+            background-color: black;
+            transform: scale(1.05);
+        }
+    }
+
+}

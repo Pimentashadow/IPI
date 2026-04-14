@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Sistema de Gestão de Inscrições Escolares</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../geral/geral.css">
+  <link rel="stylesheet" href="../styles/loging.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="img-logo">
+        <a href="../../index.html">ALDA LARA</a>
+      </div>
+      <ul id="links">
+        <a href="../../index.html">Home</a>
+        <a href="./cursos.html">Cursos</a>
+        <a href="./cadastro.html">Cadastro</a>
+        <a href="./login.html">Login</a>
+      </ul>
+      <div id="menu-hamburguer">
+        <img src="../icones/menu-hamburguer.png" alt="menu-hamburguer" width="32px">
+      </div>
+    </nav>
+  </header>
+  <!-- LOGIN PAGE -->
+  <div id="loginPage" class="login-container">
+    <div class="login-wrapper">
+      <div class="login-illustration">
+        <div class="illustration-content">
+          <h1>ALDA LARA</h1>
+          <p>Sistema de Gestão de Inscrições Escolares</p>
+        </div>
+      </div>
+      <div class="login-box">
+        <div class="login-header">
+          <h2>Bem-vindo</h2>
+          <p>Faça login para acessar sua conta</p>
+        </div>
+
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="user">Utilizador</label>
+            <input id="user" type="text" placeholder="Digite seu usuário" required />
+            <span class="input-icon">👤</span>
+          </div>
+          <div class="form-group">
+            <label for="pass">Palavra-passe</label>
+            <input id="pass" type="password" placeholder="Digite sua senha" required />
+            <span class="input-icon">🔒</span>
+          </div>
+          <div class="remember-forgot">
+            <label class="remember">
+              <input type="checkbox" />
+              Lembrar-me
+            </label>
+            <a href="#" class="forgot-password">Esqueceu a senha?</a>
+          </div>
+          <button type="submit" class="btn-login">Entrar</button>
+        </form>
+
+        <div class="login-footer">
+          <p>Não tem conta? <a href="./cadastro.html">Crie uma agora</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN PANEL -->
+  <div id="adminPanel" class="admin-panel hidden">
+    <aside class="sidebar">
+      <h3>Gestão Escolar</h3>
+      <nav>
+        <button type="button" class="active" id="btnDashboard">Dashboard</button>
+        <button type="button" id="btnCandidatos">Candidatos</button>
+        <button type="button" id="btnRelatorios">Relatórios</button>
+        <button type="button" class="logout" id="btnLogoutAdmin">Sair</button>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <!-- DASHBOARD -->
+      <section id="dashboard">
+        <h1>Dashboard Geral</h1>
+
+        <div class="dashboard-header">
+          <h2>Bem-vindo ao Dashboard</h2>
+          <p>Visão geral do sistema de inscrições</p>
+        </div>
+
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-icon">📊</div>
+            <div class="card-content">
+              <p>Total de Candidatos</p>
+              <h2 id="total">0</h2>
+            </div>
+          </div>
+          <div class="card aprovado">
+            <div class="card-icon">✅</div>
+            <div class="card-content">
+              <p>Aprovados</p>
+              <h2 id="aprovados">0</h2>
+            </div>
+          </div>
+          <div class="card pendente">
+            <div class="card-icon">⏳</div>
+            <div class="card-content">
+              <p>Pendentes</p>
+              <h2 id="pendentes">0</h2>
+            </div>
+          </div>
+          <div class="card reprovado">
+            <div class="card-icon">❌</div>
+            <div class="card-content">
+              <p>Reprovados</p>
+              <h2 id="reprovados">0</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="resumos-grid">
+          <div class="resumo-card">
+            <div class="resumo-header">
+              <h3>📚 Resumo por Curso</h3>
+            </div>
+            <ul id="resumoCursos">
+              <li>Nenhum candidato registado</li>
+            </ul>
+          </div>
+          <div class="resumo-card">
+            <div class="resumo-header">
+              <h3>📝 Atividades Recentes</h3>
+            </div>
+            <ul id="atividades">
+              <li>✔ Sistema iniciado</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CANDIDATOS -->
+      <section id="candidatos" class="hidden">
+        <h1>Gestão de Candidatos</h1>
+
+        <div class="form-section">
+          <h2>Novo Candidato</h2>
+          <div class="form-grid">
+            <input id="nome" type="text" placeholder="Nome Completo" />
+            <input id="idade" type="number" placeholder="Idade" />
+            <input id="bi" type="text" placeholder="BI / Passaporte" />
+            <input id="contacto" type="text" placeholder="Contacto" />
+            <input id="curso" type="text" placeholder="Curso Pretendido" />
+            <select id="estado">
+              <option value="Pendente">Pendente</option>
+              <option value="Aprovado">Aprovado</option>
+              <option value="Reprovado">Reprovado</option>
+            </select>
+          </div>
+          <button type="button" class="btn" id="btnAddCandidato">Registar</button>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Curso</th>
+                <th>Código</th>
+                <th>Estado</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="lista"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- RELATÓRIOS -->
+      <section id="relatorios" class="hidden">
+        <h1>Relatórios de Candidatos</h1>
+
+        <div class="filter-section">
+          <h2>Filtro de Relatórios</h2>
+          <div class="filter-grid">
+            <select id="filtroCurso">
+              <option value="">Todos os Cursos</option>
+            </select>
+            <select id="filtroEstado">
+              <option value="">Todos os Estados</option>
+              <option value="Aprovado">Aprovados</option>
+              <option value="Reprovado">Reprovados</option>
+              <option value="Pendente">Pendentes</option>
+            </select>
+            <button type="button" class="btn" id="btnAplicarFiltro">Aplicar</button>
+            <button type="button" class="btn success" id="btnExportarPDF">Exportar PDF</button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome Completo</th>
+                <th>Idade</th>
+                <th>BI / Passaporte</th>
+                <th>Contacto</th>
+                <th>Curso</th>
+                <th>Código</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody id="tabelaRelatorio"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- STUDENT PANEL -->
+  <div id="studentPanel" class="student-container hidden">
+    <div class="student-wrapper">
+      <div class="student-illustration">
+        <div class="illustration-bg"></div>
+        <div class="student-welcome">
+          <h1>Resultado da Candidatura</h1>
+          <p>Acesse seus resultados usando o código enviado</p>
+        </div>
+      </div>
+      <div class="student-content">
+        <div class="search-section">
+          <div class="search-icon">🔍</div>
+          <input id="studentCode" type="text" placeholder="Digite seu código de acesso" class="search-input" />
+          <button type="button" class="btn btn-primary" id="btnSearchStudent">Buscar Resultado</button>
+        </div>
+
+        <div id="studentResults" class="student-results hidden">
+          <div class="results-header">
+            <h2>Seus Resultados</h2>
+          </div>
+          <div class="results-grid">
+            <div class="result-item">
+              <div class="result-icon">👤</div>
+              <div class="result-data">
+                <span class="result-label">Nome</span>
+                <span class="result-value" id="sNome">-</span>
+              </div>
+            </div>
+            <div class="result-item">
+              <div class="result-icon">🆔</div>
+              <div class="result-data">
+                <span class="result-label">BI/Passaporte</span>
+                <span class="result-value" id="sBI">-</span>
+              </div>
+            </div>
+            <div class="result-item">
+              <div class="result-icon">📚</div>
+              <div class="result-data">
+                <span class="result-label">Curso</span>
+                <span class="result-value" id="sCurso">-</span>
+              </div>
+            </div>
+            <div class="result-item">
+              <div class="result-icon">📊</div>
+              <div class="result-data">
+                <span class="result-label">Média</span>
+                <span class="result-value" id="sMedia">-</span>
+              </div>
+            </div>
+          </div>
+          <div class="status-section">
+            <span class="result-label">Status da Candidatura</span>
+            <span class="result-value" id="sStatus">-</span>
+          </div>
+        </div>
+
+        <div id="noResults" class="no-results">
+          <div class="no-results-icon">📝</div>
+          <p>Digite seu código de acesso para consultar o resultado</p>
+        </div>
+
+        <button type="button" class="btn btn-logout" id="btnLogoutStudent">Sair</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+        <div class="footer-container">
+            <div class="menus">
+                <h1>Menus</h1>
+                <a href="../../index.html">Home</a>
+                <a href="./resultado.html">Resultado</a>
+                <a href="./login.html">Login</a>
+                <a href="./login.html">Cadastrar</a>
+            </div>
+
+            <div class="contato">
+                <h1>Contactos</h1>
+                <li>
+                    <img src="../icones/localizacao.png" alt="localizacao" width="24px" />
+                    <p>Luanda</p>
+                </li>
+                <li>
+                    <img src="../icones/telefone.png" alt="phone-icon" width="24px" />
+                    <p>955 213 292 / 955 222 101</p>
+                </li>
+                <li>
+                    <img src="../icones/email.png" alt="email-icon" width="24px" />
+                    <p>IPIAL@gmail.com</p>
+                </li>
+            </div>
+        </div>
+
+        <div class="copy">
+            <p>&copy; ALDA LARA 2026</p>
+        </div>
+
+    </footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/adm.js"></script>
+</body>
+</html>
